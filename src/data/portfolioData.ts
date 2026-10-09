@@ -48,7 +48,7 @@ export const DEVELOPER_PROFILE = {
   linkedin: 'https://linkedin.com/in/omar-el-amri',
   twitter: 'https://x.com/omaarelamri',
   appStore: 'https://apps.apple.com/developer/omar-el-amri',
-  bio: 'Mobile Developer specializing in real-time, map-based, and image-processing applications. Experienced in Kotlin, MVVM, Jetpack Compose, Retrofit, Room, and Firebase, with a proven record of delivering stable, high-performance apps. Passionate about clean architecture, scalability, and great UX.',
+  bio: 'Mobile Developer specializing in real-time, map-based, and image-processing applications. Experienced in Kotlin, Jetpack Compose, with a proven record of delivering stable, high-performance apps. Passionate about clean architecture, scalability, and great UX.',
   stats: [
     { label: 'Total App Downloads', value: '1.8M+' },
     { label: 'Avg Store Rating', value: '4.9 ★' },
