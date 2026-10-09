@@ -98,14 +98,6 @@ export const Hero: React.FC = () => {
             transition: 'opacity 0.4s ease, transform 0.4s ease',
           }}
         >
-          {/* White pill 1 */}
-          <button
-            type="button"
-            onClick={() => scrollToSection('about')}
-            className="inline-flex items-center justify-center bg-white text-black border border-black/10 rounded-full text-[13px] sm:text-[15px] px-4 sm:px-5 py-[0.3em] mx-[0.2em] mb-[0.4em] whitespace-nowrap hover:bg-black hover:text-white transition-colors duration-200 cursor-pointer"
-          >
-            About
-          </button>
 
           {/* White pill 2 */}
           <button

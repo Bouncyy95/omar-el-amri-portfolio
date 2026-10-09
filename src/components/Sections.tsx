@@ -296,7 +296,6 @@ export const Sections: React.FC<SectionsProps> = ({ onOpenModal }) => {
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-6 text-white/60">
-            <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href={resumeUrl} download="EL_AMRI_OMAR_Resume.pdf" className="hover:text-white transition-colors">Download Resume</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
