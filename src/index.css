@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'HelveticaNowDisplay-Medium', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'HelveticaNowDisplayW01-Rg', 'Helvetica Neue', Arial, sans-serif;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --hero-blur-color: #ffffff;
+}
+
+[data-theme="paper"],
+.theme-paper {
+  --bg-color: #faf9f5;
+  --text-color: #111113;
+  --hero-blur-color: #1a1a1c;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 350ms ease, color 350ms ease;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+body.custom-cursor-active .project-image-dialog,
+body.custom-cursor-active .project-image-dialog * {
+  cursor: auto !important;
+}
+
+body.custom-cursor-active .project-image-dialog button {
+  cursor: pointer !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* ========================================================
+   PAPER THEME SYSTEM
+   Maintains all font styles, layout physics, and animations
+   while transmuting darkness into curatorial warm white paper.
+   ======================================================== */
+
+.theme-paper,
+[data-theme="paper"] {
+  background-color: #faf9f5 !important;
+  color: #111113 !important;
+}
+
+/* Base typography overrides */
+.theme-paper .text-white {
+  color: #111113 !important;
+}
+.theme-paper .text-white\/90 {
+  color: rgba(17, 17, 19, 0.9) !important;
+}
+.theme-paper .text-white\/80 {
+  color: rgba(17, 17, 19, 0.82) !important;
+}
+.theme-paper .text-white\/70 {
+  color: rgba(17, 17, 19, 0.72) !important;
+}
+.theme-paper .text-white\/60 {
+  color: rgba(17, 17, 19, 0.62) !important;
+}
+.theme-paper .text-white\/50 {
+  color: rgba(17, 17, 19, 0.52) !important;
+}
+.theme-paper .text-white\/40 {
+  color: rgba(17, 17, 19, 0.42) !important;
+}
+.theme-paper .text-white\/30 {
+  color: rgba(17, 17, 19, 0.32) !important;
+}
+.theme-paper .text-white\/20 {
+  color: rgba(17, 17, 19, 0.22) !important;
+}
+.theme-paper .text-white\/15 {
+  color: rgba(17, 17, 19, 0.16) !important;
+}
+.theme-paper .text-white\/10 {
+  color: rgba(17, 17, 19, 0.12) !important;
+}
+
+.theme-paper .hover\:text-white:hover {
+  color: #000000 !important;
+}
+.theme-paper .group:hover .group-hover\:text-white {
+  color: #000000 !important;
+}
+
+/* Border overrides */
+.theme-paper .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+.theme-paper .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.theme-paper .border-white\/15,
+.theme-paper .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.14) !important;
+}
+.theme-paper .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.24) !important;
+}
+.theme-paper .border-white\/40 {
+  border-color: rgba(0, 0, 0, 0.34) !important;
+}
+.theme-paper .border-white\/50 {
+  border-color: rgba(0, 0, 0, 0.44) !important;
+}
+.theme-paper .border-white {
+  border-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.theme-paper .hover\:border-white\/20:hover,
+.theme-paper .hover\:border-white\/30:hover,
+.theme-paper .hover\:border-white\/40:hover {
+  border-color: rgba(0, 0, 0, 0.28) !important;
+}
+.theme-paper .group:hover .group-hover\:border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Structural backgrounds */
+.theme-paper .bg-black {
+  background-color: #faf9f5 !important;
+}
+.theme-paper .bg-black\/95 {
+  background-color: rgba(250, 249, 245, 0.97) !important;
+}
+.theme-paper .bg-black\/85,
+.theme-paper .bg-black\/80 {
+  background-color: rgba(250, 249, 245, 0.88) !important;
+}
+.theme-paper .bg-black\/70 {
+  background-color: rgba(250, 249, 245, 0.78) !important;
+}
+.theme-paper .bg-black\/60 {
+  background-color: rgba(243, 242, 238, 0.9) !important;
+}
+.theme-paper .bg-black\/40 {
+  background-color: rgba(250, 249, 245, 0.4) !important;
+}
+.theme-paper .bg-neutral-950 {
+  background-color: #f2f1ec !important;
+}
+.theme-paper .bg-neutral-900 {
+  background-color: #ebe9e3 !important;
+}
+
+/* Card surfaces */
+.theme-paper .bg-white\/\[0\.01\],
+.theme-paper .bg-white\/\[0\.02\],
+.theme-paper .bg-white\/\[0\.03\],
+.theme-paper .bg-white\/5 {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.02) !important;
+}
+.theme-paper .bg-white\/\[0\.08\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-paper .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.theme-paper .bg-white\/15 {
+  background-color: rgba(0, 0, 0, 0.07) !important;
+}
+.theme-paper .bg-white\/20 {
+  background-color: rgba(0, 0, 0, 0.09) !important;
+}
+
+/* Hover background states */
+.theme-paper .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+.theme-paper .hover\:bg-white\/10:hover {
+  background-color: rgba(0, 0, 0, 0.07) !important;
+}
+
+/* Inverted high-contrast buttons (e.g. Download Resume, filter pills, CTAs) */
+.theme-paper button.bg-white.text-black,
+.theme-paper a.bg-white.text-black,
+.theme-paper span.bg-white.text-black,
+.theme-paper .bg-white.text-black {
+  background-color: #111113 !important;
+  color: #ffffff !important;
+}
+.theme-paper button.bg-white.text-black:hover,
+.theme-paper a.bg-white.text-black:hover,
+.theme-paper .bg-white.text-black:hover {
+  background-color: #27272a !important;
+  color: #ffffff !important;
+}
+.theme-paper .hover\:bg-white:hover {
+  background-color: #111113 !important;
+  color: #ffffff !important;
+}
+.theme-paper .hover\:bg-white\/90:hover {
+  background-color: #27272a !important;
+}
+
+/* Header Gradient */
+.theme-paper header.bg-gradient-to-b {
+  background: linear-gradient(to bottom, rgba(250, 249, 245, 0.94) 0%, rgba(250, 249, 245, 0.6) 60%, transparent 100%) !important;
+}
+
+/* Mobile Hamburger bars */
+.theme-paper header button span.bg-white {
+  background-color: #111113 !important;
+}
+
+/* Hero intro blur & typewriter cursor */
+.theme-paper .hero-intro-blur {
+  color: #1a1a1c !important;
+}
+.theme-paper .cursor-blink {
+  background-color: #111113 !important;
+}
+
+/* Custom Cursor in Paper mode */
+.theme-paper .custom-cursor-ring {
+  border-color: rgba(17, 17, 19, 0.75) !important;
+  background-color: rgba(17, 17, 19, 0.03) !important;
+}
+.theme-paper .custom-cursor-ring.is-hovered {
+  border-color: #111113 !important;
+  background-color: rgba(17, 17, 19, 0.08) !important;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15) !important;
+}
+.theme-paper .custom-cursor-dot {
+  background-color: #111113 !important;
+}
+
+/* Top Progress Bar in Paper mode */
+.theme-paper .top-progress-bar-track {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+.theme-paper .top-progress-bar-fill {
+  background-color: #111113 !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Modals & Dialogs in Paper mode */
+.theme-paper [role="dialog"] {
+  background-color: rgba(17, 17, 19, 0.45) !important;
+}
+.theme-paper [role="dialog"] > div {
+  background-color: #ffffff !important;
+  color: #111113 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.2) !important;
+}
+.theme-paper [role="dialog"] input,
+.theme-paper [role="dialog"] textarea,
+.theme-paper [role="dialog"] select {
+  background-color: #f5f4ef !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+  color: #111113 !important;
+}
+.theme-paper input::placeholder,
+.theme-paper textarea::placeholder {
+  color: rgba(17, 17, 19, 0.42) !important;
+}
+
+/* Subtle shadows */
+.theme-paper .shadow-white\/5 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Selection */
+.theme-paper ::selection {
+  background-color: #111113 !important;
+  color: #ffffff !important;
+}
